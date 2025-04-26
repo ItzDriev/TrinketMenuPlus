@@ -198,6 +198,28 @@ function TrinketMenu.BuildMenu()
 	end
 	local idx = 1
 	local _, itemLink, itemID, itemName, equipSlot, itemTexture
+
+	--Change made by Driev -----------------------------------
+	-- Priority list for manual sorting
+    local priorityList = {
+		"Kiss of the Spider",
+		"Slayer's Crest",
+		"Badge of the Swarmguard",
+		"Jom Gabbar",
+		"Earth Strike",
+		"Diamond Flask",
+        "Mark of the Champion",
+		"Hand of Justice", 
+		"Fetish of the Sand Reaver",
+		"Ramstein's Lightning Bolts",
+		"Nifty Stopwatch",
+		"Gnomish Battle Chicken",
+		"Arcanite Dragonling",-- Replace with desired trinket names
+
+        -- Add more trinket names here in the desired order
+    }
+	----------------------------------------------------------
+
 	-- go through bags and gather trinkets into .BaggedTrinkets
 	for i = 0, 4 do
 		for j = 1, TrinketMenu.GetContainerNumSlots(i) do
@@ -219,6 +241,23 @@ function TrinketMenu.BuildMenu()
 			end
 		end
 	end
+
+	--Change made by Driev -----------------------------------
+	table.sort(TrinketMenu.BaggedTrinkets, function(a, b)
+        local aIndex = 9999 -- Default index for trinkets not in the priority list
+        local bIndex = 9999
+        for index, trinketName in ipairs(priorityList) do
+            if a.name == trinketName then
+                aIndex = index
+            end
+            if b.name == trinketName then
+                bIndex = index
+            end
+        end
+        return aIndex > bIndex
+    end)
+	-----------------------------------------------------------
+
 	TrinketMenu.NumberOfTrinkets = math.min(idx - 1, TrinketMenu.MaxTrinkets)
 	if TrinketMenu.NumberOfTrinkets < 1 then
 		-- user has no bagged trinkets :(
