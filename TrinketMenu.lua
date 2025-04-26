@@ -216,7 +216,7 @@ function TrinketMenu.BuildMenu()
 		"Gnomish Battle Chicken",
 		"Arcanite Dragonling",-- Replace with desired trinket names
 
-        -- Add more trinket names here in the desired order
+        --Add more trinket names here in the desired order
     }
 	----------------------------------------------------------
 
