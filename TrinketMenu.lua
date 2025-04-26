@@ -206,7 +206,7 @@ function TrinketMenu.BuildMenu()
 		"Slayer's Crest",
 		"Badge of the Swarmguard",
 		"Jom Gabbar",
-		"Earth Strike",
+		"Earthstrike",
 		"Diamond Flask",
         "Mark of the Champion",
 		"Hand of Justice", 
