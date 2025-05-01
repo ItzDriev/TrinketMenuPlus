@@ -43,7 +43,6 @@
 					self.TogglePopup = function() end
 				end
 				if self.cooldown then
-					self.cooldown:SetHideCountdownNumbers(true)
 					self.cooldown:SetSwipeColor(0, 0, 0, 0.8)
 				end
 				if self.icon then
@@ -172,7 +171,6 @@
 						end
 						self:RegisterForClicks("LeftButtonDown", "LeftButtonUp", "RightButtonUp")
 						if self.cooldown then
-							self.cooldown:SetHideCountdownNumbers(true)
 							self.cooldown:SetSwipeColor(0, 0, 0, 0.8)
 						end
 						if self.icon then
@@ -201,7 +199,6 @@
 						end
 						self:RegisterForClicks("LeftButtonDown", "LeftButtonUp", "RightButtonUp")
 						if self.cooldown then
-							self.cooldown:SetHideCountdownNumbers(true)
 							self.cooldown:SetSwipeColor(0, 0, 0, 0.8)
 						end
 						if self.icon then
@@ -235,7 +232,7 @@
 		</Scripts>
 	</Frame>
 	<!-- MenuFrame: Bagged Trinkets -->
-	<Frame name = "TrinketMenu_MenuFrame" toplevel = "true" frameStrata = "HIGH" enableMouse = "true" movable = "true" parent = "UIParent" hidden = "true" clampedToScreen = "true" inherits = "TrinketMenuBackdropTemplate">
+	<Frame name = "TrinketMenu_MenuFrame" toplevel = "true" frameStrata = "MEDIUM" enableMouse = "true" movable = "true" parent = "UIParent" hidden = "true" clampedToScreen = "true" inherits = "TrinketMenuBackdropTemplate">
 		<Size>
 			<AbsDimension x = "52" y = "92" />
 		</Size>
