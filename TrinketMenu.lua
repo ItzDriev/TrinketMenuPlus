@@ -338,7 +338,13 @@ function TrinketMenu.Initialize()
 		TrinketMenu.MasqueGroup = group
 		group:AddButton(TrinketMenu_Trinket0)
 		group:AddButton(TrinketMenu_Trinket1)
+		--Change made by Driev------------------------------
+		TrinketMenu_MenuFrame:SetFrameStrata("MEDIUM")
+		----------------------------------------------------
 		for i = 1, 30 do
+			--Change made by Driev------------------------------
+			_G["TrinketMenu_Menu"..i]:SetFrameStrata("MEDIUM")
+			----------------------------------------------------
 			_G["TrinketMenu_Menu"..i]:SetFrameLevel(2)
 			group:AddButton(_G["TrinketMenu_Menu"..i])
 		end
@@ -1325,6 +1331,7 @@ function TrinketMenu.KeyBindingsChanged()
 		TrinketMenu_Trinket1HotKey:SetText("")
 	end
 end
+
 
 --[[ Monitor Range ]]
 
